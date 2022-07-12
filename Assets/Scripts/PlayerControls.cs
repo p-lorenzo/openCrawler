@@ -28,6 +28,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""id"": ""4422083d-73cf-48b4-902e-c44874fadbd7"",
             ""actions"": [
                 {
+                    ""name"": ""Aim"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""17104441-2987-45b8-9581-1ba3557d80cd"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Movement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""1135362f-77ed-4698-a098-acddf91a75a0"",
@@ -37,10 +46,37 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Aim"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""17104441-2987-45b8-9581-1ba3557d80cd"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""Join"",
+                    ""type"": ""Button"",
+                    ""id"": ""125c014a-6561-4a47-8e87-dfa310169f66"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""476e4256-dd71-4053-be24-3ade6bb80f88"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""ac06474e-f0fe-478b-b772-51b83f5a6d00"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb675781-c1bd-423f-bad6-b930478edaf3"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -115,12 +151,45 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""131c66e5-52ec-4588-ad17-bc71097e6070"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""5b4625c6-ece6-4e1f-bbd6-5e81b75e2656"",
+                    ""path"": ""<Keyboard>/f1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Join"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b82abf3-6a1e-4945-911f-01c4e3b8f240"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Aim"",
+                    ""action"": ""Join"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40d770c7-c278-412f-bc75-aff35db0159c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15e619c9-4422-4418-85a8-6e92322a975c"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -132,6 +201,61 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KBM"",
                     ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9cae90cf-c895-4758-8e38-0aef1ad0f369"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49529829-a3dc-4c9b-8937-751b736248de"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6abce830-71b8-4b0f-992b-8f2ea9030974"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3b30cb49-9e5e-43bf-9e17-882f1fd7e5c1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d28dfc83-5a8f-42cd-806b-bd91283494be"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -165,13 +289,22 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Android"",
+            ""bindingGroup"": ""Android"",
+            ""devices"": []
         }
     ]
 }");
         // Controls
         m_Controls = asset.FindActionMap("Controls", throwIfNotFound: true);
-        m_Controls_Movement = m_Controls.FindAction("Movement", throwIfNotFound: true);
         m_Controls_Aim = m_Controls.FindAction("Aim", throwIfNotFound: true);
+        m_Controls_Movement = m_Controls.FindAction("Movement", throwIfNotFound: true);
+        m_Controls_Join = m_Controls.FindAction("Join", throwIfNotFound: true);
+        m_Controls_Dash = m_Controls.FindAction("Dash", throwIfNotFound: true);
+        m_Controls_Shoot = m_Controls.FindAction("Shoot", throwIfNotFound: true);
+        m_Controls_Menu = m_Controls.FindAction("Menu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -231,14 +364,22 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     // Controls
     private readonly InputActionMap m_Controls;
     private IControlsActions m_ControlsActionsCallbackInterface;
-    private readonly InputAction m_Controls_Movement;
     private readonly InputAction m_Controls_Aim;
+    private readonly InputAction m_Controls_Movement;
+    private readonly InputAction m_Controls_Join;
+    private readonly InputAction m_Controls_Dash;
+    private readonly InputAction m_Controls_Shoot;
+    private readonly InputAction m_Controls_Menu;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
         public ControlsActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Controls_Movement;
         public InputAction @Aim => m_Wrapper.m_Controls_Aim;
+        public InputAction @Movement => m_Wrapper.m_Controls_Movement;
+        public InputAction @Join => m_Wrapper.m_Controls_Join;
+        public InputAction @Dash => m_Wrapper.m_Controls_Dash;
+        public InputAction @Shoot => m_Wrapper.m_Controls_Shoot;
+        public InputAction @Menu => m_Wrapper.m_Controls_Menu;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -248,22 +389,46 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_ControlsActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMovement;
                 @Aim.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnAim;
                 @Aim.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnAim;
                 @Aim.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnAim;
+                @Movement.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMovement;
+                @Join.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJoin;
+                @Join.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJoin;
+                @Join.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnJoin;
+                @Dash.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnDash;
+                @Shoot.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnShoot;
+                @Menu.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_ControlsActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+                @Join.started += instance.OnJoin;
+                @Join.performed += instance.OnJoin;
+                @Join.canceled += instance.OnJoin;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -286,9 +451,22 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_KBMSchemeIndex];
         }
     }
+    private int m_AndroidSchemeIndex = -1;
+    public InputControlScheme AndroidScheme
+    {
+        get
+        {
+            if (m_AndroidSchemeIndex == -1) m_AndroidSchemeIndex = asset.FindControlSchemeIndex("Android");
+            return asset.controlSchemes[m_AndroidSchemeIndex];
+        }
+    }
     public interface IControlsActions
     {
-        void OnMovement(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+        void OnMovement(InputAction.CallbackContext context);
+        void OnJoin(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
 }
